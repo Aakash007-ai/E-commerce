@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block siteTitle %} Sign up {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-info">Sign up</button>
+    </form>
+</div>
+{% endblock %}
+{% comment %} {% extends 'base.html' %}
+{% block title %} Sign Up {% endblock %}
+{% block content %}
+<div class="container mb-5 mt-5">
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-info">Sign up</button>
+    </form>
+</div>
+{% endblock content %} {% endcomment %}
